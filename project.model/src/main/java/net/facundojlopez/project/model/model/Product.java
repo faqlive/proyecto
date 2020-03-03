@@ -4,11 +4,14 @@ import java.math.BigDecimal;
 import java.util.ArrayList;
 
 public class Product {
+    private int idProduct;
     private String productName;
     private String porductDesc;
     private BigDecimal productPrice;
     private int productStock;
     private ArrayList <String> prodcutsImages;
+    private User user;
+    private Advert advert;
 
     public Product() {
     }

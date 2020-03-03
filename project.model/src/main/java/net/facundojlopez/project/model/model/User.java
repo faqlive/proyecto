@@ -1,35 +1,37 @@
 package net.facundojlopez.project.model.model;
 
 import java.time.LocalDate;
+import java.util.List;
 
 public class User {
 
-    private  String idUser;
+    private  int idUser;
     private String name;
     private String mail;
     private LocalDate birthDate;
-    private LocalDate accounUp;
+    private LocalDate accountUp;
     private String password;
-    private Role userRole;
+    private List<Role> userRole;
+
 
     public User() {
 
     }
 
-    public User(String idUser, String name, String mail, LocalDate birthDate, String password) {
+    public User(int idUser, String name, String mail, LocalDate birthDate, String password) {
         this.idUser = idUser;
         this.name = name;
         this.mail = mail;
         this.birthDate = birthDate;
-        this.accounUp = LocalDate.now();
+        this.accountUp = LocalDate.now();
         this.password = password;
     }
 
-    public String getIdUser() {
+    public int getIdUser() {
         return idUser;
     }
 
-    public void setIdUser(String idUser) {
+    public void setIdUser(int idUser) {
         this.idUser = idUser;
     }
 
@@ -57,12 +59,12 @@ public class User {
         this.birthDate = birthDate;
     }
 
-    public LocalDate getAccounUp() {
-        return accounUp;
+    public LocalDate getAccountUp() {
+        return accountUp;
     }
 
-    public void setAccounUp(LocalDate accounUp) {
-        this.accounUp = accounUp;
+    public void setAccountUp(LocalDate accountUp) {
+        this.accountUp = accountUp;
     }
 
     public String getPassword() {
@@ -72,11 +74,12 @@ public class User {
     public void setPassword(String password) {
         this.password = password;
     }
-    public Role getUserRole() {
+
+    public List<Role> getUserRole() {
         return userRole;
     }
 
-    public void setUserRole(Role userRole) {
+    public void setUserRole(List<Role> userRole) {
         this.userRole = userRole;
     }
 
@@ -86,7 +89,7 @@ public class User {
                 "idUser='" + idUser + '\'' +
                 ", name='" + name + '\'' +
                 ", mail='" + mail + '\'' +
-                ", accounUp=" + accounUp +
+                ", accounUp=" + accountUp +
                 '}';
     }
 }

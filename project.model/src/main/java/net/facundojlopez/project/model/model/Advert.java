@@ -2,7 +2,7 @@ package net.facundojlopez.project.model.model;
 
 import java.time.LocalDate;
 
-public class Advet {
+public class Advert {
 
     private int idAdvert;
     private String title;
@@ -12,10 +12,10 @@ public class Advet {
     private Category category;
     private User user;
 
-    public Advet() {
+    public Advert() {
     }
 
-    public Advet(int idAdvert, String title, String advertDesc, Product product, LocalDate advertUp, Category category, User user) {
+    public Advert(int idAdvert, String title, String advertDesc, Product product, LocalDate advertUp, Category category, User user) {
         this.idAdvert = idAdvert;
         this.title = title;
         this.advertDesc = advertDesc;
@@ -83,7 +83,7 @@ public class Advet {
 
     @Override
     public String toString() {
-        return "Advet{" +
+        return "Advert{" +
                 "idAdvert=" + idAdvert +
                 ", title='" + title + '\'' +
                 ", product=" + product +
